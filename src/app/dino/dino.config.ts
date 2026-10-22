@@ -7,12 +7,12 @@ export class DinoConfig extends Phaser.Scene {
   public static readonly sceneConfig: Phaser.Types.Core.GameConfig = {
     width: 1000,
     height: 340,
-    parent: 'dino-game',
+    parent: "dino-game",
     input: {
       keyboard: true,
     },
     physics: {
-      default: 'arcade',
+      default: "arcade",
       arcade: {
         debug: false,
       },

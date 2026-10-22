@@ -1,21 +1,23 @@
-import { Dino } from '../actors/dino';
+import * as Phaser from "phaser";
+
+import { Dino } from "../actors/dino";
 
 export class DinoGameOver extends Phaser.Scene {
   private scoreText!: Phaser.GameObjects.BitmapText;
   private ground!: Phaser.GameObjects.TileSprite;
   private dino!: Dino;
-  // private gameOverText: Phaser.GameObjects.Image;
-   private restartIcon!: Phaser.GameObjects.Image;
+  private gameOverText!: Phaser.GameObjects.Image;
+  private restartIcon!: Phaser.GameObjects.Image;
 
   private height: number = 340;
   private width: number = 1000;
 
   constructor() {
-    super('DinoGameOver');
+    super("DinoGameOver");
   }
 
   preload(): void {
-    this.load.pack('dinoPack', 'images/dino/pack.json', 'dinoPack');
+    this.load.pack("dinoPack", "images/dino/pack.json", "dinoPack");
   }
 
   create(data: { score: number }): void {
@@ -25,7 +27,7 @@ export class DinoGameOver extends Phaser.Scene {
       this.cameras.main.worldView.y + this.cameras.main.height / 2;
 
     this.ground = this.add
-      .tileSprite(0, this.height, 88, 26, 'ground')
+      .tileSprite(0, this.height, 88, 26, "ground")
       .setOrigin(0, 1);
 
     this.ground.width = this.width;
@@ -34,33 +36,33 @@ export class DinoGameOver extends Phaser.Scene {
       scene: this,
       x: 75,
       y: this.height,
-      key: 'dino-hurt',
+      key: "dino-hurt",
     });
 
     this.dino.body.offset.y = 18;
 
-    // this.gameOverText = this.add.image(
-    //   screenCenterX,
-    //   screenCenterY,
-    //   'game-over'
-    // );
-     this.restartIcon = this.add
-      .image(screenCenterX, screenCenterY + 60, 'restart')
+    this.gameOverText = this.add.image(
+      screenCenterX,
+      screenCenterY,
+      "game-over",
+    );
+    this.restartIcon = this.add
+      .image(screenCenterX, screenCenterY + 60, "restart")
       .setInteractive()
-      .on('pointerdown', () => this.restartGame());
+      .on("pointerdown", () => this.restartGame());
 
     // this.scoreText = this.add
     //   .bitmapText(
     //     this.sys.canvas.width / 2 - 14,
     //     30,
     //     'font',
-    //     data.score.toString()jmn 
+    //     data.score.toString()jmn
     //   )
     //   .setDepth(2);
   }
 
   restartGame(): void {
-    this.scene.stop('DinoGameOver');
-    this.scene.start('DinoGame');
+    this.scene.stop("DinoGameOver");
+    this.scene.start("DinoGame");
   }
 }

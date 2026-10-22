@@ -3,6 +3,7 @@ import * as Phaser from 'phaser';
 import { Dino } from '../actors/dino';
 import { EnemyBird } from '../actors/enemy-bird';
 import { EnemyCactuses } from '../actors/enemy-cactuses';
+import { DinoGameOver } from './dino.game.over';
 
 export class DinoGame extends Phaser.Scene {
   private scoreText!: Phaser.GameObjects.BitmapText;
@@ -97,6 +98,9 @@ export class DinoGame extends Phaser.Scene {
       this.obsticles,
       () => {
         //   this.persistScore();
+        console.log('Game Over'); 
+
+ 
         this.scene.start('DinoGameOver', {
           score: this.registry.values['score'],
         });
