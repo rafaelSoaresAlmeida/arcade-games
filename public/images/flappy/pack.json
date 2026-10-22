@@ -1,0 +1,41 @@
+{
+  "flappyTilapiaPack": {
+    "files": [
+      {
+        "type": "bitmapFont",
+        "key": "font",
+        "textureURL": "images/shared/font/font.png",
+        "fontDataURL": "images/shared/font/font.fnt"
+      },
+      {
+        "type": "image",
+        "key": "background",
+        "url": "images/flappy/bg.png"
+      },
+      {
+        "type": "image",
+        "key": "startBackground",
+        "url": "images/flappy/bg-start-game.png"
+      },
+      {
+        "type": "image",
+        "key": "gameOverBackground",
+        "url": "images/flappy/bg-game-over.png"
+      },
+      {
+        "type": "image",
+        "key": "tilapia",
+        "url": "images/flappy/tilapia.png"
+      },
+      {
+        "type": "spritesheet",
+        "key": "pipe",
+        "url": "images/flappy/pipe.png",
+        "frameConfig": {
+          "frameWidth": 20,
+          "frameHeight": 20
+        }
+      }
+    ]
+  }
+}

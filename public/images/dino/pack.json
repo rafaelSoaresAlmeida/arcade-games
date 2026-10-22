@@ -1,0 +1,117 @@
+{
+  "dinoPack": {
+    "files": [
+      {
+        "type": "bitmapFont",
+        "key": "font",
+        "textureURL": "images/shared/font/font.png",
+        "fontDataURL": "images/shared/font/font.fnt"
+      },
+      {
+        "type": "image",
+        "key": "ground",
+        "url": "images/dino/images/ground.png"
+      },
+      {
+        "type": "image",
+        "key": "dino-idle",
+        "url": "images/dino/images/dino-idle.png"
+      },
+      {
+        "type": "image",
+        "key": "dino-hurt",
+        "url": "images/dino/images/dino-hurt.png"
+      },
+      {
+        "type": "image",
+        "key": "restart",
+        "url": "images/dino/images/restart.png"
+      },
+      {
+        "type": "image",
+        "key": "game-over",
+        "url": "images/dino/images/game-over.png"
+      },
+      {
+        "type": "image",
+        "key": "cloud",
+        "url": "images/dino/images/cloud.png"
+      },
+      {
+        "type": "image",
+        "key": "obsticle-1",
+        "url": "images/dino/images/cactuses_small_1.png"
+      },
+      {
+        "type": "image",
+        "key": "obsticle-2",
+        "url": "images/dino/images/cactuses_small_2.png"
+      },
+      {
+        "type": "image",
+        "key": "obsticle-3",
+        "url": "images/dino/images/cactuses_small_3.png"
+      },
+      {
+        "type": "image",
+        "key": "obsticle-4",
+        "url": "images/dino/images/cactuses_big_1.png"
+      },
+      {
+        "type": "image",
+        "key": "obsticle-5",
+        "url": "images/dino/images/cactuses_big_2.png"
+      },
+      {
+        "type": "image",
+        "key": "obsticle-6",
+        "url": "images/dino/images/cactuses_big_3.png"
+      },
+      {
+        "type": "spritesheet",
+        "key": "star",
+        "url": "images/dino/images/stars.png",
+        "frameConfig": {
+          "frameWidth": 9,
+          "frameHeight": 9
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "moon",
+        "url": "images/dino/images/moon.png",
+        "frameConfig": {
+          "frameWidth": 20,
+          "frameHeight": 40
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "dino",
+        "url": "images/dino/images/dino-run.png",
+        "frameConfig": {
+          "frameWidth": 88,
+          "frameHeight": 94
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "dino-down",
+        "url": "images/dino/images/dino-down.png",
+        "frameConfig": {
+          "frameWidth": 118,
+          "frameHeight": 94
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "enemy-bird",
+        "url": "images/dino/images/enemy-bird.png",
+        "frameConfig": {
+          "frameWidth": 92,
+          "frameHeight": 77
+        }
+      }
+    ]
+  }
+}

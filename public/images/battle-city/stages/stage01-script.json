@@ -1,0 +1,126 @@
+{
+  "stageNumber": 1,
+  "stageName": "stage01",
+  "enemies": [
+    {
+      "name": "enemy01",
+      "type": "regular",
+      "spawn": "center",
+      "delay": 1000
+    },
+    {
+      "name": "enemy02",
+      "type": "regular",
+      "spawn": "right",
+      "delay": 5000
+    },
+    {
+      "name": "enemy03",
+      "type": "regular",
+      "spawn": "left",
+      "delay": 9000
+    },
+    {
+      "name": "enemy04",
+      "type": "regular",
+      "spawn": "center",
+      "delay": 13000
+    },
+    {
+      "name": "enemy05",
+      "type": "regular",
+      "spawn": "right",
+      "delay": 17000
+    },
+    {
+      "name": "enemy06",
+      "type": "regular",
+      "spawn": "left",
+      "delay": 21000
+    },
+    {
+      "name": "enemy07",
+      "type": "regular",
+      "spawn": "center",
+      "delay": 25000
+    },
+    {
+      "name": "enemy08",
+      "type": "regular",
+      "spawn": "right",
+      "delay": 29000
+    },
+    {
+      "name": "enemy09",
+      "type": "regular",
+      "spawn": "left",
+      "delay": 33000
+    },
+    {
+      "name": "enemy10",
+      "type": "regular",
+      "spawn": "center",
+      "delay": 37000
+    },
+    {
+      "name": "enemy11",
+      "type": "regular",
+      "spawn": "right",
+      "delay": 41000
+    },
+    {
+      "name": "enemy12",
+      "type": "regular",
+      "spawn": "left",
+      "delay": 45000
+    },
+    {
+      "name": "enemy13",
+      "type": "regular",
+      "spawn": "center",
+      "delay": 49000
+    },
+    {
+      "name": "enemy14",
+      "type": "regular",
+      "spawn": "right",
+      "delay": 53000
+    },
+    {
+      "name": "enemy15",
+      "type": "regular",
+      "spawn": "left",
+      "delay": 57000
+    },
+    {
+      "name": "enemy16",
+      "type": "regular",
+      "spawn": "center",
+      "delay": 61000
+    },
+    {
+      "name": "enemy17",
+      "type": "regular",
+      "spawn": "right",
+      "delay": 65000
+    },
+    {
+      "name": "enemy18",
+      "type": "regular",
+      "spawn": "left",
+      "delay": 69000
+    },
+    {
+      "name": "enemy19",
+      "type": "speedy",
+      "spawn": "center",
+      "delay": 73000
+    },
+    {
+      "name": "enemy20",
+      "type": "speedy",
+      "spawn": "right",
+      "delay": 77000
+    }
+  ]
+}
