@@ -7,15 +7,21 @@ import {
 } from '@angular/core';
 import Phaser from 'phaser';
 import { PacManScene, pacManGameConfig } from './pac-man.scene';
+import { PacManConfig } from './pac-man.config';
 
 @Component({
-  selector: 'app-pac-man',
+  selector: "app-pac-man",
   template: `
     <div class="arcade-page">
-      <h1 class="glow" style="font-size: 20px; color: var(--neon-yellow); text-align:center; margin-bottom: 8px;">
+      <h1
+        class="glow"
+        style="font-size: 20px; color: var(--neon-yellow); text-align:center; margin-bottom: 8px;"
+      >
         PAC-MAN
       </h1>
-      <p style="font-size: 8px; color: var(--neon-pink); text-align:center; margin-bottom: 20px;">
+      <p
+        style="font-size: 8px; color: var(--neon-pink); text-align:center; margin-bottom: 20px;"
+      >
         NAMCO 1980 TRIBUTE
       </p>
 
@@ -24,7 +30,8 @@ import { PacManScene, pacManGameConfig } from './pac-man.scene';
           <div><span class="label">ARROWS:</span> MOVE</div>
           <div><span class="label">R:</span> RESTART</div>
         </div>
-        <div #gameContainer id="pac-man-game" class="game-container"></div>
+        <!-- <div #gameContainer id="pac-man-game" class="game-container"></div> -->
+        <div align="center" id="pac-game"></div>
         <button class="arcade-btn" (click)="restart()">RESTART GAME</button>
       </div>
 
@@ -52,11 +59,11 @@ import { PacManScene, pacManGameConfig } from './pac-man.scene';
   `,
 })
 export class PacManComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('gameContainer') gameContainer!: ElementRef;
+  @ViewChild("gameContainer") gameContainer!: ElementRef;
   private game!: Phaser.Game;
 
   ngAfterViewInit() {
-    this.game = new Phaser.Game(pacManGameConfig);
+    this.game = new Phaser.Game(PacManConfig.sceneConfig);
   }
 
   ngOnDestroy() {
@@ -67,7 +74,7 @@ export class PacManComponent implements AfterViewInit, OnDestroy {
 
   restart() {
     if (this.game) {
-      const scene = this.game.scene.getScene('PacManScene') as PacManScene;
+      const scene = this.game.scene.getScene("PacManScene") as PacManScene;
       scene.scene.restart();
     }
   }

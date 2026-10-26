@@ -1,4 +1,4 @@
-import * as Phaser from 'phaser';
+//import * as Phaser from 'phaser';
 import { Tilapia } from '../objects/tilapia';
 import { Pipe } from '../objects/pipe';
 

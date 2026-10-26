@@ -1,4 +1,5 @@
 import { Dino } from '../actors/dino';
+//import * as Phaser from "phaser";
 
 export class DinoStartGame extends Phaser.Scene {
   private clickButton: any;

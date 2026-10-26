@@ -1,21 +1,23 @@
 import {
   Component,
-  OnDestroy,
   AfterViewInit,
-  ElementRef,
-  ViewChild,
 } from '@angular/core';
 import Phaser from 'phaser';
-import { BattleCityScene, battleCityGameConfig } from './battle-city.scene';
+import { BattleCityConfig } from './battlecity.config';
 
 @Component({
-  selector: 'app-battle-city',
+  selector: "app-battle-city",
   template: `
     <div class="arcade-page">
-      <h1 class="glow" style="font-size: 20px; color: var(--neon-pink); text-align:center; margin-bottom: 8px;">
+      <h1
+        class="glow"
+        style="font-size: 20px; color: var(--neon-pink); text-align:center; margin-bottom: 8px;"
+      >
         BATTLE CITY
       </h1>
-      <p style="font-size: 8px; color: var(--neon-yellow); text-align:center; margin-bottom: 20px;">
+      <p
+        style="font-size: 8px; color: var(--neon-yellow); text-align:center; margin-bottom: 20px;"
+      >
         NINTENDO 1985 TRIBUTE
       </p>
 
@@ -25,8 +27,7 @@ import { BattleCityScene, battleCityGameConfig } from './battle-city.scene';
           <div><span class="label">SPACE:</span> FIRE</div>
           <div><span class="label">R:</span> RESTART</div>
         </div>
-        <div #gameContainer id="battle-city-game" class="game-container"></div>
-        <button class="arcade-btn pink" (click)="restart()">RESTART GAME</button>
+        <div align="center" id="battlecity-game"></div>
       </div>
 
       <div class="crt-panel" style="margin-top: 30px;">
@@ -43,24 +44,16 @@ import { BattleCityScene, battleCityGameConfig } from './battle-city.scene';
     </div>
   `,
 })
-export class BattleCityComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('gameContainer') gameContainer!: ElementRef;
-  private game!: Phaser.Game;
+export class BattleCityComponent implements AfterViewInit {
+
+  private phaserGame: any;
 
   ngAfterViewInit() {
-    this.game = new Phaser.Game(battleCityGameConfig);
+    this.phaserGame = new Phaser.Game(BattleCityConfig.sceneConfig);
   }
 
   ngOnDestroy() {
-    if (this.game) {
-      this.game.destroy(true);
-    }
+  this.phaserGame.destroy();
   }
 
-  restart() {
-    if (this.game) {
-      const scene = this.game.scene.getScene('BattleCityScene') as BattleCityScene;
-      scene.scene.restart();
-    }
-  }
 }

@@ -1,4 +1,4 @@
-import * as Phaser from "phaser";
+//import * as Phaser from "phaser";
 
 export default class FlappyTilapiaStartGame extends Phaser.Scene {
   private clickButton: any;
